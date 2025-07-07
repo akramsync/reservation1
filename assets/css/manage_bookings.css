@@ -1,0 +1,377 @@
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Admin container */
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Search form styling */
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-form input {
+    padding: 10px 15px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 0 2px rgba(0, 64, 128, 0.1);
+}
+
+.search-form button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0066cc;
+}
+
+.btn-clear {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #f8f9fa;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-clear:hover {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+/* Bookings Summary */
+.bookings-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+}
+
+.bookings-summary p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Table styling */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    min-width: 800px; /* Minimum width to ensure all columns are visible */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #004080;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+td {
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Status styles */
+.status-confirmed {
+    color: #28a745;
+    background-color: #e3f9ec;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.status-canceled {
+    color: #dc3545;
+    background-color: #fbe7e9;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Button styling */
+.btn-cancel {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #c82333;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.page-link {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    color: #004080;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #f8f9fa;
+    border-color: #004080;
+}
+
+.page-link.active {
+    background-color: #004080;
+    color: #fff;
+    border-color: #004080;
+}
+
+/* No records message */
+.no-records {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 992px) {
+    .admin-container {
+        margin: 10px;
+    }
+
+    .search-form input {
+        max-width: 300px;
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form input,
+    .search-form button,
+    .btn-clear {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Responsive table */
+    .table-responsive {
+        margin: 0 -15px 20px; /* Negative margin to allow full-width scrolling */
+        padding: 0 15px; /* Add padding back to maintain spacing */
+        border: none;
+    }
+
+    table {
+        border: 1px solid #e9ecef;
+    }
+
+    table thead {
+        display: table-header-group;
+    }
+
+    table tr {
+        display: table-row;
+    }
+
+    table th,
+    table td {
+        display: table-cell;
+        text-align: left;
+        padding: 12px 15px;
+        min-width: 120px; /* Minimum width for each cell */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    table td[data-label]::before {
+        display: none; /* Remove the mobile labels */
+    }
+
+    /* Fixed width for specific columns */
+    table th:nth-child(1),
+    table td:nth-child(1) { /* Booking ID */
+        min-width: 100px;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) { /* User */
+        min-width: 150px;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) { /* Bus */
+        min-width: 100px;
+    }
+
+    table th:nth-child(4),
+    table td:nth-child(4) { /* Route */
+        min-width: 200px;
+    }
+
+    table th:nth-child(5),
+    table td:nth-child(5) { /* Seats */
+        min-width: 100px;
+    }
+
+    table th:nth-child(6),
+    table td:nth-child(6) { /* Booking Time */
+        min-width: 150px;
+    }
+
+    table th:nth-child(7),
+    table td:nth-child(7) { /* Status */
+        min-width: 120px;
+    }
+
+    table th:nth-child(8),
+    table td:nth-child(8) { /* Price */
+        min-width: 100px;
+    }
+
+    table th:nth-child(9),
+    table td:nth-child(9) { /* Action */
+        min-width: 100px;
+    }
+
+    /* Add scroll indicator */
+    .table-responsive::after {
+        content: '⟺ Scroll horizontally';
+        display: block;
+        text-align: center;
+        padding: 10px;
+        color: #666;
+        font-size: 14px;
+        background: #f8f9fa;
+        border-bottom: 1px solid #e9ecef;
+        position: sticky;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .btn-cancel {
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/* Media Query for Very Small Screens */
+@media (max-width: 480px) {
+    .admin-container {
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .table-responsive {
+        margin: 0 -10px 20px;
+        padding: 0 10px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .status-confirmed,
+    .status-canceled {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    .btn-cancel {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    /* Adjust scroll indicator for very small screens */
+    .table-responsive::after {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

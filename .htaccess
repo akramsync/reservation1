@@ -1,0 +1,43 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Hide .php extensions in URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Redirect /admin to /admin/admin_login.php
+RewriteRule ^admin/?$ /admin/admin_login.php [L]
+
+# Allow /admin_login to work without .php extension
+RewriteRule ^admin/admin_login/?$ /admin/admin_login.php [L]
+
+
+# Disable directory browsing
+Options -Indexes
+
+# Restrict direct access to developer directories (like includes)
+RewriteEngine On
+
+# Block access to includes directory
+RewriteRule ^includes/ - [F,L]
+
+# Block access to the images directory (only to prevent directory listing, but still allow files to load)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^images/ - [F,L]
+
+# Block access to the css directory (only to prevent directory listing, but still allow files to load)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^css/ - [F,L]
+
+# Allow access to valid files (images, css, js, etc.)
+<FilesMatch "\.(jpg|jpeg|png|gif|css|js|ico|woff|woff2)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Block access to .htaccess itself
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>

@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.success-message, .error-message {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.success-message {
+    background-color: #e0ffe0;
+    color: #008000;
+}
+
+.error-message {
+    background-color: #ffe0e0;
+    color: #ff0000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+/* My Balance Extras CSS (merged) */
+.mb-extras-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 24px 20px;
+}
+.mb-extras-title {
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+    font-weight: 800;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+}
+
+/* Tips */
+.mb-tips-section {
+    background: #f8fafd;
+    border-top: 1.5px solid #eaf2fb;
+    border-bottom: 1.5px solid #eaf2fb;
+    color: #222;
+}
+.mb-tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+.mb-tips-list li {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0,85,170,0.06);
+    margin-bottom: 16px;
+    padding: 16px 18px;
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* FAQ */
+.mb-faq-section {
+    background: #fff;
+    color: #222;
+}
+.mb-faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+.mb-faq-item {
+    border-bottom: 1px solid #eaeaea;
+}
+.mb-faq-question {
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 17px;
+    color: #0055aa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.mb-faq-question:hover {
+    color: #003b75;
+}
+.mb-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+    color: #222;
+    font-size: 15px;
+    padding-left: 8px;
+}
+.mb-faq-item.active .mb-faq-answer {
+    max-height: 200px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+}
+.mb-faq-item:last-child {
+    border-bottom: none;
+}
+
+/* Support Banner */
+.mb-support-banner {
+    background: linear-gradient(90deg, #eaf2fb 0%, #f8fafd 100%);
+    color: #222;
+    padding: 28px 0;
+    text-align: center;
+    margin-top: 32px;
+}
+.mb-support-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+}
+.mb-support-content i {
+    font-size: 28px;
+    color: #0055aa;
+}
+.mb-support-content a {
+    color: #0055aa;
+    text-decoration: underline;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+.mb-support-content a:hover {
+    color: #003b75;
+}
+
+@media (max-width: 700px) {
+    .mb-extras-title {
+        font-size: 20px;
+    }
+    .mb-tips-list li, .mb-faq-question, .mb-faq-answer, .mb-support-content {
+        font-size: 15px;
+    }
+    .mb-support-content i {
+        font-size: 20px;
+    }
+    .mb-extras-container {
+        padding: 18px 6px 10px 6px;
+    }
+}

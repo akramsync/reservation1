@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #004080;
+    text-align: center;
+}
+
+.balance-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.card {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+    min-width: 250px; /* Ensure the card does not become too small */
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow form elements to wrap on smaller screens */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .balance-cards {
+        flex-direction: column; /* Stack the cards vertically on small screens */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Make cards take full width on small screens */
+        margin: 10px 0;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Make the submit button full width */
+    }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #004080;
+    text-align: center;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-form input, .filter-form select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.transaction-table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Ensures table doesn't get too squeezed */
+}
+
+.transaction-table th, .transaction-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.transaction-table th {
+    background-color: #004080;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.transaction-table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.transaction-table tr:hover td {
+    background-color: #f0f7ff;
+}
+
+.export-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.export-btn {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.export-btn:hover {
+    background-color: #0066cc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .export-section {
+        justify-content: center;
+    }
+
+    /* Custom scrollbar for better mobile experience */
+    .table-responsive::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    /* Table specific mobile styles */
+    .transaction-table {
+        margin: 15px -15px;
+        width: calc(100% + 30px);
+    }
+
+    .table-responsive {
+        border-radius: 0;
+    }
+
+    .transaction-table th, 
+    .transaction-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    .transaction-table th, 
+    .transaction-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
