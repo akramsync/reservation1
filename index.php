@@ -198,7 +198,7 @@
     <div class="container">
         <div class="about-container">
             <div class="about-image">
-                <img src="assets/images/3.jpeg" alt="About GOBus">
+                <img src="assets/images/3.jpeg" al  t="About GOBus">
             </div>
             <div class="about-content">
                 <h2>Your Gateway to Unforgettable Events</h2>
@@ -233,7 +233,7 @@
                             </svg>
                         </div>
                         <div class="about-feature-content">
-                           <h4>10 Juin </h4>
+                           <h4>20 Juillet </h4>
                             <p>Ski Dubai</p>
                         </div>
                     </div>

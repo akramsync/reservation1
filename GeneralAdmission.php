@@ -87,50 +87,49 @@
         <h1>Réservation de Billets</h1>
         <form action="process_booking.php" method="POST">
             <div class="champ">
-                <label for="email">Adresse e-mail</label>
-                <input type="email" id="email" name="email" required placeholder="Entrez votre adresse e-mail">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
             </div>
             
             <div class="champ">
-                <label for="location">Ville</label>
-                <input type="text" id="location" name="location" required placeholder="Entrez votre ville">
+                <label for="location">City</label>
+                <input type="text" id="location" name="location" required placeholder="Enter your city">
             </div>
             
             <div class="champ">
-                <label for="zip_code">Code Postal</label>
-                <input type="text" id="zip_code" name="zip_code" required placeholder="Entrez votre code postal" pattern="[0-9]{5}" title="Veuillez entrer un code postal valide à 5 chiffres">
+                <label for="zip_code">Postal Code</label>
+                <input type="text" id="zip_code" name="zip_code" required placeholder="Enter your postal code" pattern="[0-9]{5}" title="Veuillez entrer un code postal valide à 5 chiffres">
             </div>
             
             <div class="champ">
-                <label for="ticket_type">Type de Billet</label>
+                <label for="ticket_type">Ticket Type</label>
                 <select id="ticket_type" name="ticket_type">
                     <option value="general" selected>Admission Générale</option>
                    
                 </select>
                 <div class="type-billet">
-                    <p><strong>Admission Générale</strong> donne accès à toutes les zones générales de l’événement.</p>
+                    <p><strong>Admission Générale</strong> grants access to all general areas of the event.</p>
                 </div>
             </div>
             
           <div style="text-align: center; margin-top: 20px;">
-  <a href="#" 
-     
-     rel="noreferrer noopener"
-     style="
-       display: inline-block;
-       background-color: #28a745; /* vert */
-       padding: 12px 24px;
-       border-radius: 6px;
-       color: white;
-       font-weight: bold;
-       text-decoration: none;
-       font-family: sans-serif;
-       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-     ">
-    Payer en Crypto
-  </a>
+    <button type="submit" name="pay_crypto" 
+        style="
+            display: inline-block;
+            background-color: #28a745;
+            padding: 12px 24px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        ">
+        Payer en Crypto
+    </button>
 </div>
-
         </form>
     </div>
 

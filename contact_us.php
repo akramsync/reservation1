@@ -14,7 +14,7 @@
         <div class="contact-hero-overlay"></div>
         <div class="container contact-hero-content">
             <h1>Contact Us</h1>
-            <p>We're here to help! Reach out for bookings, support, or any questions about GOBus. Reach out and our team will respond promptly.</p>
+            <p>Whether it’s about booking your tickets, getting support, or finding out more about the event, our team is here to respond quickly and help you every step of the way.</p>
         </div>
     </section>
 
